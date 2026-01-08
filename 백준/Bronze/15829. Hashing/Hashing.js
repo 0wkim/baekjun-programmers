@@ -11,9 +11,11 @@ const m = 1234567891;
 const alphabetList = Array.from({length: 26}, (_, i) => String.fromCharCode(97+i));
 
 let hashSum = 0;
+let power = 1;
 for (let i = 0; i < length; i++) {
     let a = alphabetList.indexOf(alphabetString[i]) + 1;
-    hashSum += a * r**i;
+    hashSum = (hashSum + a * power) % m;
+    power = (power * r) % m;
 }
 
 console.log(hashSum);
