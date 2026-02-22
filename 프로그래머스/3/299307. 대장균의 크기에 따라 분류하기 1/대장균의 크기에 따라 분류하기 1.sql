@@ -6,4 +6,4 @@ SELECT ID, (CASE
                 ELSE 'MEDIUM'
            END) AS SIZE
 FROM ECOLI_DATA
-ORDER BY ID; 
+ORDER BY ID;
